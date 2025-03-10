@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+
+p{
+    color: rgb(0, 0, 0);
+}
+
+#mainBody{
+    padding-top: 300px;
+    padding-right: 300px;
+    padding-left: 200px;
+    padding-bottom: 80;
+    position: relative;
+}
