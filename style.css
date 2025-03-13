@@ -2,33 +2,39 @@ body{
     background-color: rgb(255, 255, 255);
     padding-left: 150px;
     padding-right: 150px;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
     height: 100%;
     overscroll-behavior: none;
 }
 
 html{
-    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+section{
+    scroll-snap-align: start;  
 }
 
 h1{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif ;
     font-size: 60px;
     color: rgb(0, 0, 0);
     margin-bottom: 0px;
+
 }
 
 p{  
-    font-family: Arial, Helvetica, serif;
+    font-family: helvetica-light, serif;
     color: rgb(0, 0, 0);
     margin-top: 0px;
+    cursor: default;
 }
 /* gradient */
 
 .gradient-container{
-    height: 100%;
-    width: 1800px;
+    height: 900px;
+    width: 1600px;
     position: absolute;
     left: -200px;
     top: -50px;
@@ -53,7 +59,7 @@ p{
 .gradient-container div:nth-child(1){
     height: 50%;
     width: 50%;
-    background-color: #145277;
+    background-color: #e6838f;
     left: -10%;
     top: -10%;
 }
@@ -61,7 +67,7 @@ p{
 .gradient-container div:nth-child(2){
     height: 80%;
     width: 70%;
-    background-color: #26c5f3;
+    background-color: #efa3fc;
     left: 50%;
     top: -10%;
     animation-delay: 8s;
@@ -70,7 +76,7 @@ p{
 .gradient-container div:nth-child(3){
     height: 65%;
     width: 80%;
-    background-color: #83d0cb;
+    background-color: #859aeb;
     left: -50%;
     top: 50%;
     animation-delay: 0.3s;
@@ -79,12 +85,11 @@ p{
 .gradient-container div:nth-child(4){
     height: 50%;
     width: 50%;
-    background-color: #b429f9;
+    background-color: #a18ce0;
     left: 55%;
     top: 70%;
     animation-delay: 1.2s;
 }
-
 
 .gradient-container::after{
     position: absolute;
@@ -95,12 +100,13 @@ p{
     overflow: hidden;
 }
 
-
 a:visited,a{
     text-decoration: none;
     color: black;
     font-size: 25px;
 }
+
+/* End gradient */
 
 #TitleScreen{
     padding-top: 300px;
@@ -114,47 +120,15 @@ a:visited,a{
     display: inline-block;
 }
 
-img{
+p:hover #hide {
     max-width: 100%;
-    display: block;
 }
 
-/*tech grid*/
-.tech-wrapper{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-.tech-box{
-    border: 1px solid black;
-    border-radius: 30px;
-    padding: 1rem;
-    text-align: center;
-    font-size: 45px;
-}
-
-
-/*project grids*/
-
-.wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-.box{
-    border: 1px solid black;
-    border-radius: 6px;
-    padding: 2rem;
-    text-align: left;
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: span 3;
+#hide{
+  display: inline-block;
+  max-width: 0%;
+  vertical-align: bottom;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width 3s ease;
 }
