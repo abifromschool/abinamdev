@@ -28,4 +28,24 @@ hand.addEventListener("mouseleave", () => {
     hand.style.transform = "rotate(0deg)";
 });
 
-//------Project and table animations-----
+//Loads projects from JSON
+fetch('data/projects.json')
+  .then(res => res.json())
+  .then(data => {
+    const wrapper = document.getElementById('projectContainer');
+    wrapper.innerHTML = '';
+
+    data.forEach(project => {
+      const box = document.createElement('div');
+      box.className = 'box';
+      box.innerHTML = `
+        <h2>${project.title}</h2>
+        <p>${project.description}</p>
+        <img src="${project.image}" alt="${project.title}">
+      `;
+      wrapper.appendChild(box);
+    });
+  })
+  .catch(err => {
+    console.error("Failed to load projects:", err);
+  });
