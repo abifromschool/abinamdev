@@ -28,6 +28,8 @@ hand.addEventListener("mouseleave", () => {
     hand.style.transform = "rotate(0deg)";
 });
 
+//comment for cache
+
 //Loads projects from JSON
 fetch('data/projects.json')
   .then(res => res.json())

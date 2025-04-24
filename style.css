@@ -193,6 +193,7 @@ img{
 
 /*project grids*/
 
+/*added comment to fix cache*/
 .wrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
