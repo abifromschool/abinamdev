@@ -33,20 +33,20 @@ p{
 #projects {
     padding-left: 200px;
     padding-right: 200px;
+    z-index: 1;
 }
 
 /* gradient */
 
 .gradient-container{
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
     position: absolute;
     left: 0px;
     top: 0px;
     overflow: hidden;
-    border-radius: 0px;
     z-index: -1;
-
+    pointer-events: none;
 }
 
 .gradient-container div{
@@ -113,12 +113,15 @@ a:visited,a{
 
 /* End gradient */
 
-#TitleScreen{
-    padding-top: 300px;
-    padding-right: 300px;
-    padding-left: 200px;
-    padding-bottom: 450px;
+#TitleScreen {
+    height: 100vh;
+    width: 100%;
     position: relative;
+    padding: 0 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 0;
 }
 
 #wavingHandEmoji{
