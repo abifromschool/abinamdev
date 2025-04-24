@@ -1,6 +1,5 @@
 body{
     background-color: rgb(255, 255, 255);
-    overflow-y: auto;
     overflow-x: hidden;
     height: 100%;
     margin: 0;
@@ -27,6 +26,7 @@ p{
     font-family: helvetica-light, serif;
     color: rgb(0, 0, 0);
     margin-top: 0px;
+    cursor: default;
 }
 
 #technologies,
@@ -128,86 +128,15 @@ a:visited,a{
     display: inline-block;
 }
 
-p:hover #osuName {
-    max-width: 0%;
-}
-p:hover #buckeyeEmj{
+p:hover #hide {
     max-width: 100%;
 }
 
-
-#osuName{
-  display: inline-block;
-  max-width: 100%;
-  vertical-align: bottom;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: max-width .5s ease;
-}
-
-#buckeyeEmj{
+#hide{
   display: inline-block;
   max-width: 0%;
   vertical-align: bottom;
   overflow: hidden;
   white-space: nowrap;
-  transition: max-width 1s ease-in-out;
-}
-
-img{
-    max-width: 100%;
-    display: block;
-}
-
-#hyperlinks{
-    font-size: 30px;
-}
-
-/*tech grid*/
-.tech-wrapper{
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 200px));
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-.tech-box{
-    position: relative;
-    bottom: 0px;
-    border: 1px solid black;
-    border-radius: 30px;
-    padding: 1rem;
-    text-align: center;
-    font-size: 45px;
-    background-color: rgba(229, 226, 226, 0);
-    transition: bottom 0.25s ease-in-out;
-}
-
-.tech-box:hover{
-    bottom: 10px;
-}
-
-
-/*project grids*/
-
-.wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-.box{
-    border: 1px solid black;
-    border-radius: 6px;
-    padding: 2rem;
-    text-align: left;
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: span 3;
+  transition: max-width 3s ease;
 }
