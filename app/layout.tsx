@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
+import Header from "./components/header";
 
 const michelangelus = localFont({
   src: [
@@ -36,7 +37,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={michelangelus.className}>{children}</body>
+      <body className={michelangelus.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
