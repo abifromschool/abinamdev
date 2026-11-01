@@ -5,6 +5,12 @@ export default function Header() {
     <header className="absolute top-0 left-0 z-10 w-full flex justify-center gap-24 pt-12 text-xl">
       <Link
         className="transition ease-out duration 150 hover:scale-110"
+        href="/"
+      >
+        home
+      </Link>
+      <Link
+        className="transition ease-out duration 150 hover:scale-110"
         href="/projects"
       >
         projects
