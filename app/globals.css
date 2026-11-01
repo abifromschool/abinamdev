@@ -11,3 +11,12 @@ body {
   color: var(--foreground);
   min-height: 100vh;
 }
+
+html {
+  background-color: #4E2121;
+  overscroll-behavior: none;
+}
+
+body {
+  color: var(--foreground);
+}

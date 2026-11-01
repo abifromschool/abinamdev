@@ -4,7 +4,7 @@ import type { Project } from "../data/projects";
 export default function ProjectCard({ project }: { project: Project }) {
   const { name, blurb, href, image } = project;
   const cls =
-    "block overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-[#8fc2b8]/50";
+    "block overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition ease-out duration 150 hover:border-[#8fc2b8]/50 hover:scale-101";
 
   const body = (
     <>
