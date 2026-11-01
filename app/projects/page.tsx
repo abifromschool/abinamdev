@@ -1,5 +1,6 @@
 import ProjectCard from "../components/projectcard";
 import { projects } from "../data/projects";
+import Header from "../components/header";
 
 export default function Projects() {
   const left = projects.filter((_, i) => i % 2 === 0);
@@ -7,6 +8,7 @@ export default function Projects() {
 
   return (
     <main className="mx-auto max-w-[1040px] px-8 pb-24 pt-40">
+      <Header />
       <h1 className="text-5xl leading-none">projects</h1>
       <p className="mt-3 text-lg opacity-70">some stuff i made</p>
 
