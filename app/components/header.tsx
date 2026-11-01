@@ -27,6 +27,12 @@ export default function Header() {
       >
         linkedin
       </a>
+      <Link
+        className="transition ease-out duration 150 hover:scale-110"
+        href="/gallery"
+      >
+        gallery
+      </Link>
     </header>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import GalleryViewer from "../components/galleryviewer";
+import GrassField from "../components/grass";
 import { photos } from "../data/gallery";
 
 export const metadata: Metadata = {
@@ -9,21 +10,23 @@ export const metadata: Metadata = {
 
 export default function Gallery() {
   return (
-    <main className="mx-auto max-w-[1108px] px-8 pb-16 pt-14">
-      <div className="grid grid-cols-[1fr_auto_1fr] items-baseline gap-x-7">
-        <Link
-          href="/"
-          className="justify-self-end text-[44px] leading-none tracking-[-0.01em] text-[#f4ece8]/60 transition hover:text-white"
-        >
-          home
-        </Link>
-        <h1 className="text-[44px] font-normal leading-none tracking-[-0.01em]">
-          gallery
-        </h1>
-        <span />
+    <div className="relative min-h-screen">
+      <div className="pointer-events-none fixed inset-0 z-0">
+        <GrassField />
       </div>
 
-      <GalleryViewer photos={photos} />
-    </main>
+      <main className="relative z-10 mx-auto max-w-[1108px] px-8 pb-16 pt-14">
+        <div className="flex flex-col items-center gap-4">
+          <Link
+            href="/"
+            className="text-xl transition ease-in-out hover:scale-110"
+          >
+            home
+          </Link>
+        </div>
+
+        <GalleryViewer photos={photos} />
+      </main>
+    </div>
   );
 }
